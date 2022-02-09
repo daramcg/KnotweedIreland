@@ -12,15 +12,75 @@
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <style>
         #map {
-            width: 987px;
-            height: 511px;
+            width: 900px;
+            height: 460px;
         }
         </style>
+
+    <style>
+        #header {
+	        grid-area: header;
+	        padding:10px;
+	        background-color: #333;
+	        color: white;
+	        font-size: 2em;
+        }
+        #sidebar{
+            padding: 5px; /* adds inner padding */
+            background: #333; /* background color */
+            color: white;
+            padding-top: 5px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        #map{
+	        grid-area: map;
+        }
+        body {
+	        display: grid;
+	        grid-template-rows: 80px 1fr 50px;
+	        grid-template-columns: 440px 1fr;
+	        grid-template-areas: 
+	        "header header"
+	        "sidebar map"
+	        "footer footer";
+        }
+
+        #footer{
+            grid-area: footer;
+           
+            background-color: #333;
+            color: white;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-left: 600px;
+        }
+        
+    </style>
+
+
         <title></title>
     </head>
     <body>
+        <div class="header", id="header">
+            Invasive Japanese Knotweed
+        </div>
+
+        <div class="sidebar", id="sidebar">
+            My Sidebar
+        </div>
+
         <div id="map">
         </div>
+
+        <div class="footer", id="footer">
+            My Footer
+        </div>
+
+
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
